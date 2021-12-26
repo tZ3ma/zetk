@@ -1,0 +1,9 @@
+.. _changelog_021:
+
+zettelkasten v0.2.1 (2021-03-08)
+================================
+
+* Bump `importlib-metadata <https://pypi.org/project/importlib-metadata/>`_ from 3.7.0 to 3.7.2
+* Bump `pre-commit <https://pypi.org/project/pre-commit/>`_ from 2.10.1 to 2.11.0
+* Clean up development and usage dependencies
+* Fix cli verions option (-v / --version)

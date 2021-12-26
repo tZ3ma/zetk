@@ -1,0 +1,9 @@
+.. _changelog_023:
+
+zettelkasten v0.2.3 (2021-03-09)
+================================
+* Improve zettelkasten's version display and remove pkg_resource
+* Fix cli backport problems
+* Update .gitignore
+* Update project metadata
+* Bump `identify <https://pypi.org/project/identify/>`_ from 2.1.0 to 2.1.1

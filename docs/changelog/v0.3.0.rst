@@ -1,0 +1,9 @@
+.. _changelog_030:
+
+zettelkasten v0.3.0 (2021-03-14)
+================================
+* Update project metadata
+* Move parsing utilities into zettelkasten.parse
+* Add the ``open`` command to the cli
+* Introduce the ``compile`` command and api
+* Implement the ``add`` comand inside the cli

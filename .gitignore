@@ -1,0 +1,18 @@
+.mypy_cache/
+/.coverage
+/.coverage.*
+/.nox/
+/.python-version
+/.pytype/
+/dist/
+/docs/_build/
+/src/*.egg-info/
+__pycache__/
+
+# testkasten
+tests/testkasten
+tests/pytest_dir
+tests/doctest_dir
+
+# Spreadsheet locks
+.~lock*

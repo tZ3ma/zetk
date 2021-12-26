@@ -1,0 +1,5 @@
+.. _changelog_022:
+
+zettelkasten v0.2.2 (2021-03-08)
+================================
+- Resolve version conflicts
