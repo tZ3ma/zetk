@@ -38,6 +38,7 @@ extensions = [
     "sphinx.ext.autosummary",  # create linked tables for documented attributes
     # 3rd party extensions
     "sphinx_paramlinks",  # enable :paramref: cross referencing
+    "sphinx_click",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,12 +56,12 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 # html_theme = "alabaster"
-html_theme = "sphinx_rtd_theme"
+html_theme = "furo"
 
 html_theme_options = {
     # "canonical_url": "https://www.pypsa.org/doc",
-    "display_version": True,
-    "sticky_navigation": True,
+    # "display_version": True,
+    # "sticky_navigation": True,
     # "style_nav_header_background": "#009682",
 }
 # Add any paths that contain custom static files (such as style sheets) here,

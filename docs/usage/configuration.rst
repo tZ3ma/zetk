@@ -35,5 +35,5 @@ Among the :ref:`most tweaked <most_tweaked>` attributes are the:
      
 This default config file can be seen below:
 
-    .. literalinclude:: ../../../tests/testkasten/pytest_dir/.zettelkasten.d/zk.cfg
+    .. literalinclude:: ../../tests/testkasten/pytest_dir/.zettelkasten.d/zk.cfg
        :language: cfg

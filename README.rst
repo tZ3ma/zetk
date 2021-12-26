@@ -36,18 +36,6 @@ Zettelkasten
    :alt: Black
 
 
-Features
---------
-
-* TODO
-
-
-Requirements
-------------
-
-* TODO
-
-
 Installation
 ------------
 
