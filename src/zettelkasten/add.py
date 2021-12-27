@@ -1,4 +1,9 @@
 # zettelkasten/add.py
+"""Module providing and api for handling addition tasks.
+
+API for adding zettels and sources, as well as their subsequent lower-level
+functionalities.
+"""
 import inspect
 import logging
 import os
@@ -23,8 +28,7 @@ install_location = os.path.normpath(
 
 
 def create_zettel_location(parsed_zettel_name, dummy_location=None):
-    """
-    Utility for making sure the requested zettel location exists.
+    """Utility for making sure the requested zettel location exists.
 
     The zettelkasten location is stated in the :ref:`cfile`.
 
@@ -109,8 +113,7 @@ def create_zettel_location(parsed_zettel_name, dummy_location=None):
 
 
 def write_org_zettel_attributes(org_file_path, zettel_attributes):
-    r"""
-    Utility wrapping the attribute writing in a singular call.
+    r"""Utility wrapping the attribute writing in a singular call.
 
     Parameters
     ----------
@@ -124,7 +127,6 @@ def write_org_zettel_attributes(org_file_path, zettel_attributes):
 
     Examples
     --------
-
     1. Create zettel folder dummy location:
 
        >>> import pathlib
@@ -163,8 +165,7 @@ def write_org_zettel_attributes(org_file_path, zettel_attributes):
 def write_org_zettel_bibliography(
     org_file_path, bibliography_file, force_overwrite=False
 ):
-    r"""
-    Utility wrapping bibliography addition to the org file.
+    r"""Utility wrapping bibliography addition to the org file.
 
     Parameters
     ----------
@@ -180,7 +181,6 @@ def write_org_zettel_bibliography(
 
     Examples
     --------
-
     1. Create zettel folder dummy location:
 
        >>> import pathlib
@@ -608,7 +608,8 @@ def write_source_entry(
                 logger.debug("Overwrite requested.")
 
                 part_1 = f"@misc{{{uid},\n"
-                part_2 = content.split(part_1)[-1].split("\n}%\n")[0] + "\n}%\n"
+                part_2 = content.split(
+                    part_1)[-1].split("\n}%\n")[0] + "\n}%\n"
 
                 content_to_overwrite = part_1 + part_2
 
