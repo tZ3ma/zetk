@@ -1,4 +1,5 @@
 # zettelkasten/defaults.py
+"""Module providing the zettelkasten defaults."""
 import inspect
 import os
 from datetime import date
@@ -44,8 +45,9 @@ location = os.path.normpath(
         "testkasten",
     )
 )
-"""
-Default location of the zettelkasten. For testing purposes this states a folder
+"""Default location of the zettelkasten.
+
+For testing purposes this states a folder
 inside the installation directory. Is to be :mod:`monkeypatched
 <zettelkasten.monkeypatch>` during zettelkasten command executions.
 """
@@ -76,11 +78,11 @@ def bibliography_entry(
     year=def_year,
     date=def_date,
 ):
-    """
-    Default utility for creating bib entries. Located here so a dedicated user
-    can overwrite this. Not designed to be monkeypatched.
-    """
+    """Default utility for creating bib entries.
 
+    Located here so a dedicated user can overwrite this. Not designed to be
+    monkeypatched.
+    """
     entry = [
         f"@misc{{{key},\n",
         f"  author   = {{{author}}},\n",
@@ -212,13 +214,11 @@ reserved_folder_names = [
     "doctest_dir",
     ".zettelkasten.d",
 ]
-"""
-Folder names reserved for the zettelkasten. Needed during compilation.
-"""
+"""Folder names reserved for the zettelkasten. Needed during compilation."""
 
 
 def infer_file_type(f):
-    """Tries to enfer the file type by looking at the file ending"""
+    """Tries to enfer the file type by looking at the file ending."""
     file_ending = f.split(".")[-1]
 
     for folder, file_endings in source_file_formats.items():

@@ -1,16 +1,12 @@
 # zettelkasten/cli.py
 # type: ignore[attr-defined]
-"""
-Module aggregating the command line interface.
-"""
+"""Module aggregating the command line interface."""
 import configparser
 import logging
 import os
 import platform
 import subprocess
-from enum import Enum
 from pathlib import Path
-from typing import Optional
 
 import typer
 from rich.console import Console
@@ -41,15 +37,6 @@ custom_theme = Theme(
     }
 )
 
-# class Color(str, Enum):
-#     white = "white"
-#     red = "red"
-#     cyan = "cyan"
-#     magenta = "magenta"
-#     yellow = "yellow"
-#     green = "green"
-
-
 app = typer.Typer(
     name="zettelkasten",
     help="Folder based zettelkasten with a bibtex reference system and emacs "
@@ -78,13 +65,11 @@ def version(
         # is_eager=True,
     ),
 ):
-    """Prints the version of the package"""
+    """Prints the version of the package."""
 
 
 def complete_zettel_name(incomplete: str):
-    """
-    Utility to propose zettelname completesion based on input.
-    """
+    """Utility to propose zettelname completesion based on input."""
     completion = []
     for name in comp.parsed_zettels():
         if name.startswith(incomplete):
@@ -105,8 +90,7 @@ def add(
         help="Overwrite existing zettel. Use with extreme care!",
     ),
 ):
-    """Adds a Zettel"""
-
+    """Adds a Zettel."""
     zadd.new_zettel(name=zettel, force_overwrite=force_overwrite)
 
 
@@ -117,9 +101,7 @@ def add(
 
 
 def print_colored_zettel(zettel, cmap):
-    """Utility to create a colored zettel list output according to the
-    :ref:`colors`."""
-
+    """Create a colored zettel list output according to the :ref:`colors`."""
     # decontruct zettel name
     parts = zettel.split(defaults.name_sep)
 
@@ -157,8 +139,7 @@ def list(
         help="Only list zettels of this subcategory",
     ),
 ):
-    """List stored zettels"""
-
+    """List stored zettels."""
     # create a config parse able to parse lists
     configs = configparser.ConfigParser(
         converters={"list": lambda x: [i.strip() for i in x.split(",")]}
@@ -198,7 +179,6 @@ def open(
     ),
 ):
     """Opens a zettel if found inside zettelkasten."""
-
     zettel_path = parse.zettel_path(zettel).resolve()
 
     if platform.system() == "Darwin":  # macOS
@@ -269,7 +249,6 @@ def ref(
     ),
 ):
     """Adds a reference/source file to an existing zettel."""
-
     if zettel is None and interactive:
         zettel = Prompt.ask(
             "[b green]Zettel[/b green] the reference is added to"

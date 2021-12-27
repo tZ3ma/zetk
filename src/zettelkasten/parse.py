@@ -1,7 +1,5 @@
 # zettelkasten/parse.py
-"""
-Module aggregating all of the user input parsing capabilities.
-"""
+"""Module aggregating all of the user input parsing capabilities."""
 import logging
 import typing
 from pathlib import Path
@@ -12,8 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 class ZettelName(typing.NamedTuple):
-    """
-    Zettel name consisting of ``category``, ``subcategory``, ``uid``
+    """Zettel name consisting of ``category``, ``subcategory``, ``uid``.
 
     Parameters
     ----------
@@ -46,7 +43,7 @@ class ZettelName(typing.NamedTuple):
 
 
 def zettel_name(name):
-    r"""Zettel name parsing syntax
+    r"""Zettel name parsing syntax.
 
     Parameters
     ----------
@@ -99,7 +96,6 @@ def zettel_name(name):
     zettel_name: tuple
         Tuple consisting of ('category', 'subcategory', 'uid')
     """
-
     logger.debug("-------------------------------")
     logger.debug("Preparing to parse Zettel name")
 
@@ -152,8 +148,7 @@ def zettel_name(name):
 
 
 def zettel_attributes(parsed_zettel_name, **kwargs):
-    r"""
-    Zettel attribute parsing utility.
+    r"""Zettel attribute parsing utility.
 
     The attributes parsed are stated in the :ref:`cfile` along with a set
     of required attributes. These required attributes are made of the
@@ -169,7 +164,7 @@ def zettel_attributes(parsed_zettel_name, **kwargs):
     parsed_zettel_name: ZettelName
         :class:`typing.NamedTuple` representing the zettel.
 
-    **kwargs:
+    kwargs:
         The attributes to be parsed. Attributes are/need to be stated in the
         :ref:`cfile` along with a set of required attributes.
 
@@ -242,7 +237,6 @@ def zettel_attributes(parsed_zettel_name, **kwargs):
          '#+Topics:': []}
 
     """
-
     logger.debug("-------------------------------")
     logger.debug("Preparing to parse zettel attributes")
 
@@ -268,10 +262,10 @@ def zettel_attributes(parsed_zettel_name, **kwargs):
 
 
 def zettel_path(name):
-    r"""
-    Infer the file system location of a given zettelname relative to
-    :attr:`defaults.location <zettelkasten.defaults.location>`.
+    r"""Infer the file system location of a given zettelname.
 
+    Location is inferred relative to
+    :attr:`defaults.location <zettelkasten.defaults.location>`.
 
     Does NOT check if location is a valid file.
 

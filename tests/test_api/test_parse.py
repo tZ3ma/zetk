@@ -1,3 +1,4 @@
+"""Module for testing name and location parsing."""
 import importlib
 import os
 from pathlib import Path
@@ -26,8 +27,7 @@ def test_zettel_name_parsing(name, expected):
 
 
 def test_zettel_attribute_parsing():
-    """Test correct attribute parsing"""
-
+    """Test correct attribute parsing."""
     parsed_attributes = parse.zettel_attributes(
         parsed_zettel_name=parse.ZettelName("woodturning", "tools", "chisel"),
         tags=["#Rework", "#NiceTry"],
@@ -64,8 +64,7 @@ def test_zettel_attribute_parsing():
     ],
 )
 def test_zettel_path_parsing(zettel, path):
-    """Test correct zettel path parsing"""
-
+    """Test correct zettel path parsing."""
     # create a mock zettelkasten
     defaults.location = os.path.join(
         "tests",

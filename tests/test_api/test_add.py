@@ -1,3 +1,4 @@
+"""Module for testing zettel and source addition."""
 import os
 from pathlib import Path
 
@@ -26,7 +27,6 @@ def test_zettel_location_creation(
     tmp_path, parsed_zettel_name, expected_path_addendum
 ):
     """Test correct zettel path creation."""
-
     complete_path = add.create_zettel_location(
         parsed_zettel_name=parse.ZettelName(*parsed_zettel_name),
         dummy_location=tmp_path / "zettelkasten",
@@ -40,8 +40,7 @@ def test_zettel_location_creation(
 @pytest.mark.dependency(name="addition")
 # @pytest.fixture(scope="session")
 def test_zettel_addition(tmp_path):
-    """Test succesfull zettel addition"""
-
+    """Test succesfull zettel addition."""
     # reassure dummy location zettel initiaion:
     initialize.structure_zettelkasten(tmp_path / "zettelkasten")
 
@@ -62,8 +61,7 @@ def test_zettel_addition(tmp_path):
 
 @pytest.mark.dependency(name="unintended_addition", depends=["addition"])
 def test_unintended_zettel_addition(tmp_path):
-    """Test unintentionally requesting to overwrite an existing zettel"""
-
+    """Test unintentionally requesting to overwrite an existing zettel."""
     # reassure dummy location zettel initiaion:
     initialize.structure_zettelkasten(tmp_path / "zettelkasten")
 
@@ -103,7 +101,6 @@ zettel_attributes_list = [
 
 def test_zettel_attribute_writing(tmp_path):
     """Test succesfull attribute writing during zettel creation."""
-
     zettel_folder = tmp_path / "lobby" / "attributes"
 
     zettel_folder.mkdir(parents=True, exist_ok=True)
@@ -123,7 +120,6 @@ def test_zettel_attribute_writing(tmp_path):
 @pytest.mark.dependency(name="bib_creation")
 def test_bibtex_file_creation(tmp_path):
     """Test succesfull bibliography file creation."""
-
     zettel_folder = tmp_path / "lobby" / "bibliography"
 
     zettel_folder.mkdir(parents=True, exist_ok=True)
@@ -137,8 +133,7 @@ def test_bibtex_file_creation(tmp_path):
 
 @pytest.mark.dependency(name="bib_creation", depends=["bib_creation"])
 def test_repeated_bibtex_file_creation(tmp_path):
-    """Test creating the same bibfile over and over"""
-
+    """Test creating the same bibfile over and over."""
     zettel_folder = tmp_path / "lobby" / "bibliography"
 
     zettel_folder.mkdir(parents=True, exist_ok=True)
@@ -163,7 +158,6 @@ def test_repeated_bibtex_file_creation(tmp_path):
 
 def test_org_zettel_bibtex_writing(tmp_path):
     """Test succesfull bibtex writing during zettel org file creation."""
-
     # dummy zettel folder...
     zettel_folder = tmp_path / "lobby" / "bibtex"
 
@@ -193,7 +187,6 @@ def test_org_zettel_bibtex_writing(tmp_path):
 @pytest.mark.dependency(name="dummy_souce_addition", depends=["addition"])
 def test_dummy_source_addition(tmp_path):
     """Test sucessfull source addition using a dummy location."""
-
     # reassure dummy location zettel initiaion:
     initialize.structure_zettelkasten(tmp_path / "zettelkasten")
 
@@ -234,7 +227,6 @@ def test_dummy_source_addition(tmp_path):
 @pytest.mark.dependency(name="souce_addition", depends=["addition"])
 def test_source_addition():
     """Test sucessfull source addition using zk's defaults."""
-
     import importlib
 
     importlib.reload(zettelkasten.defaults)

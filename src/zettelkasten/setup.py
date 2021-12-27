@@ -1,7 +1,5 @@
 # zettelkasten/setupy.py
-"""
-Module handling the very first use of the zettelkasten after installation.
-"""
+"""Module handling the initial use of the zettelkasten after installation."""
 import logging
 from pathlib import Path
 
@@ -11,9 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 def create_config_folder(dummy_location=None):
-    """
-    Create the zettelkasten's tweaking folder for the configuration
-    and rc files.
+    """Create the zk's tweaking folder for the configuration and rc files.
 
     Parameters
     ----------
@@ -45,7 +41,6 @@ def create_config_folder(dummy_location=None):
         >>> Path('tests/doctest_dir/.zettelkasten.d').is_dir()
         True
     """
-
     logger.debug("Initializing zettelkasten configuration file")
 
     if dummy_location:
@@ -150,9 +145,9 @@ def create_config_file_lines():
 
 
 def create_config_file(dummy_location=None):
-    """
-    Create the zettelkasten's :ref:`cfile` for tweaking locations
-    templates etc. Every attribute inside :mod:`zettelkasten.defaults` can be
+    """Create the zl's :ref:`cfile` for tweaking locations templates etc.
+
+    Every attribute inside :mod:`zettelkasten.defaults` can be
     overridden/tweaked using it. The :ref:`config file's <cfile>` default
     location is ``~/.zettelkasten.d/zk.cfg``.
 
@@ -234,8 +229,8 @@ def create_styles_file_lines():
 
 
 def create_styles_file(dummy_location=None):
-    """
-    Create the zettelkasten's :ref:`styles` file for tweaking output styles.
+    """Create the zk's :ref:`styles` file for tweaking output styles.
+
     The :ref:`styles config file's <styles>`
     default location is ``~/.zettelkasten.d/styles.cfg``.
 

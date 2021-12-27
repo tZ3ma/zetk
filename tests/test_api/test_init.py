@@ -1,4 +1,5 @@
 # zettelkasten/../tests/test_api/test_monkey_patch.py
+"""Module for testing zettelkasten initialization."""
 import pytest
 
 from zettelkasten import add
@@ -9,7 +10,6 @@ from zettelkasten import initialize
 @pytest.mark.dependency(name="zk_dir")
 def test_zettelkasten_creation(tmp_path):
     """Test succesfull zettelkasten creation."""
-
     # create dummy zettelkasten location
     dummy_location = tmp_path / "zettelkasten"
 
@@ -25,7 +25,6 @@ def test_zettelkasten_creation(tmp_path):
 
 def test_zettelkasten_subdir_creation(tmp_path):
     """Test succesfull zettelkasten subdir creation."""
-
     # create dummy zettelkasten location
     dummy_location = tmp_path / "zettelkasten"
 
@@ -43,7 +42,6 @@ def test_zettelkasten_subdir_creation(tmp_path):
 
 def test_non_overwrite_creation(tmp_path):
     """Test reinitiating a zettelkasten not overwriting any existing stuff."""
-
     # create dummy zettelkasten location
     dummy_location = tmp_path / "zettelkasten"
 
@@ -71,9 +69,11 @@ def test_non_overwrite_creation(tmp_path):
 
 
 def test_rebuilding_initial_structure(tmp_path):
-    """Test rebuilding the initial folder structure on reinitializing the
-    zettelkasten."""
+    """Test rebuilding on reinitialization.
 
+    Test rebuilding the initial folder structure on reinitializing the
+    zettelkasten.
+    """
     # create dummy zettelkasten location
     dummy_location = tmp_path / "zettelkasten"
 

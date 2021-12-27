@@ -1,6 +1,5 @@
 # zettelkasten/monkeypatch.py
-"""
-Module aggregating all of the monkey patching functionalities.
+"""Module aggregating all of the monkey patching functionalities.
 
 Each time a command is executed via the command line,
 zettelkasten monkey patches it's defaults as specified
@@ -14,7 +13,6 @@ from typing import Any
 from typing import MutableMapping
 from typing import Optional
 from typing import Type
-from typing import Union
 
 from . import defaults
 
@@ -22,11 +20,11 @@ logger = logging.getLogger(__name__)
 
 
 def patch_defaults(config_file_path):
-    """
-    Main monkeypatching utility. Ensures the paramters inside the
-    :ref:`cfile` are enforced by overwriting zettelkasten's defaults.
-    """
+    """Main monkeypatching utility.
 
+    Ensures the paramters inside the :ref:`cfile` are enforced by overwriting
+    zettelkasten's defaults.
+    """
     # create a config parse able to parse lists
     configs = configparser.ConfigParser(
         converters={"list": lambda x: [i.strip() for i in x.split(",")]}

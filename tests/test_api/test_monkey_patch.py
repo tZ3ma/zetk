@@ -1,6 +1,6 @@
 # zettelkasten/../tests/test_api/test_monkey_patch.py
-import pytest
-
+"""Module for testing monkeypatching utilities."""
+# import pytest
 import zettelkasten.defaults
 import zettelkasten.monkeypatch
 import zettelkasten.parse as parse
@@ -9,7 +9,6 @@ import zettelkasten.setup
 
 def test_name_sep_patching():
     """Test successfull namesep changes."""
-
     assert parse.zettel_name("woodturning/tools/chisel") == (
         "woodturning",
         "tools",
@@ -36,7 +35,6 @@ def test_name_sep_patching():
 
 def test_config_file_patching():
     """Test successfull monkey patching using the :ref:`config-file`."""
-
     import importlib
 
     importlib.reload(zettelkasten.defaults)

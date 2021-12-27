@@ -1,7 +1,5 @@
 # zettelkasten/compile.py
-"""
-Module to aggregate all of the zettelkasten meta analysis tools.
-"""
+"""Module to aggregate all of the zettelkasten meta analysis tools."""
 import os
 from collections import defaultdict
 
@@ -9,8 +7,7 @@ from . import defaults
 
 
 def categories():
-    """
-    Compiles a sorted list of categories including the :ref:`lobby`
+    """Compiles a sorted list of categories including the :ref:`lobby`.
 
     Uses :attr:`zettelkasten.defaults.location` as top level folder for
     compiling.
@@ -44,7 +41,6 @@ def categories():
         >>> print(cats)
         ['carpentry', 'lobby', 'woodturning']
     """
-
     path = defaults.location
     folders = [f.name for f in os.scandir(path) if f.is_dir()]
     compiled_categories = [
@@ -55,8 +51,7 @@ def categories():
 
 
 def all_subcategories():
-    """
-    Compiles a sorted list of all subcategories inside the zettelkasten.
+    """Compiles a sorted list of all subcategories inside the zettelkasten.
 
     Uses :attr:`zettelkasten.defaults.location` as top level folder for
     compiling.
@@ -105,7 +100,8 @@ def all_subcategories():
 
 
 def subcategory_mapping():
-    """
+    """Mapping subcategories to their category.
+
     Compiles a dict of sorted lists representing the subategories mapped to
     their category.
 
@@ -142,8 +138,6 @@ def subcategory_mapping():
         ...    print(f"{key}: {value}")
         carpentry: ['tools']
         woodturning: ['tools']
-
-
     """
     path = defaults.location
     cats = dict()
@@ -164,7 +158,8 @@ def subcategory_mapping():
 
 
 def zettel_mapping():
-    """
+    """Mapping zettels to subcategories.
+
     Compiles a dict of of dicts of sorted lists representing the zettels mapped
     to their subategories mapped to their category.
 
@@ -236,7 +231,8 @@ def zettel_mapping():
 
 
 def parsed_zettels():
-    """
+    """Mapping zettels to subcategories to categories.
+
     Compiles a dict of of dicts of sorted lists representing the zettels mapped
     to their subategories mapped to their category.
 

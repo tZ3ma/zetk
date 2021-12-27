@@ -1,6 +1,8 @@
 # type: ignore[attr-defined]
-"""CLI interface for managing a folder based zettelkasten using emacs org-mode
-file zettels and a bibtex reference system"""
+"""CLI interface for managing a folder based zettelkasten.
+
+Using emacs org-mode file zettels and a bibtex reference system.
+"""
 
 try:
     from importlib.metadata import PackageNotFoundError, version

@@ -225,8 +225,7 @@ def write_org_zettel_bibliography(
 
 
 def create_bibliography_file(bibliography_file_path, force_overwrite=False):
-    """
-    Wrap bibliography file creation.
+    """Wrap bibliography file creation.
 
     Parameters
     ----------
@@ -249,7 +248,6 @@ def create_bibliography_file(bibliography_file_path, force_overwrite=False):
 
     Examples
     --------
-
     >>> import os
 
     1. Create zettel folder dummy location:
@@ -293,8 +291,7 @@ def create_bibliography_file(bibliography_file_path, force_overwrite=False):
 def create_bibliography_file_test_entries(
     zettel_name, force_overwrite=False, dummy_location=None
 ):
-    """
-    Wrap creating bibliography test entries.
+    """Wrap creating bibliography test entries.
 
     Parameters
     ----------
@@ -311,7 +308,6 @@ def create_bibliography_file_test_entries(
         Dummy location used for testing. Design usage is to fallback on
         :attr:`zettelkasten.defaults.location`.
     """
-
     example_entries = [
         (
             f"{install_location}/tests/bib_sources/test_audio.mp3",
@@ -390,7 +386,7 @@ def new_zettel(name, force_overwrite=False, dummy_location=None, **kwargs):
         Dummy location used for testing. Used instead of
         :attr:`zettelkasten.defaults.location` when used.
 
-    **kwargs
+    kwargs
         Zettel attributes to be parsed. See :func:`parse_zettel_attributes`
         for more details.
 
@@ -527,8 +523,7 @@ def write_source_entry(
     date,
     force_overwrite=False,
 ):
-    """
-    Utility wrapping source entry writing.
+    """Utility wrapping source entry writing.
 
     Tests if the entry is already present,  whether to overwrite it or not and
     performs the actual writing.
@@ -608,8 +603,7 @@ def write_source_entry(
                 logger.debug("Overwrite requested.")
 
                 part_1 = f"@misc{{{uid},\n"
-                part_2 = content.split(
-                    part_1)[-1].split("\n}%\n")[0] + "\n}%\n"
+                part_2 = content.split(part_1)[-1].split("\n}%\n")[0] + "\n}%\n"
 
                 content_to_overwrite = part_1 + part_2
 
@@ -671,8 +665,7 @@ def new_source(
     force_overwrite=False,
     dummy_location=None,
 ):
-    r"""
-    Source adding utility.
+    r"""Source adding utility.
 
     Adds a source to a zettel's bibliography file as well as the
     :attr:`Zettelkasten's overall bibliography file

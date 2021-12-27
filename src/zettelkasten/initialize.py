@@ -1,8 +1,8 @@
 # zettelkasten/initialize.py
-"""
-Module handling zettelkasten creation and recreation. Used before most of the
-commands coming from the cli are executed to ensure the zettelkasten looks like
-it is expected to.
+"""Module handling zettelkasten creation and recreation.
+
+Used before most of the commands coming from the cli are executed to ensure
+the zettelkasten looks like it is expected to.
 """
 import logging
 import os

@@ -1,14 +1,16 @@
+"""Module for testing zettel compilation."""
 import os
-
-import pytest
 
 import zettelkasten
 
+# import pytest
+
 
 def test_categories_compilation():
-    """Test correct category (folders directly below the zettelkasten folder)
-    compilation."""
+    """Test correct category compilation.
 
+    Includes folders directly below the zettelkasten folder.
+    """
     test_zettels = [
         "woodturning/tools/chisel",
         "my_zettel",
@@ -38,9 +40,10 @@ def test_categories_compilation():
 
 
 def test_all_subcategories_compilation():
-    """Test correct subcategory (folders directly below the category folders)
-    compilation."""
+    """Test correct subcategory compilation.
 
+    Includes folders directly below the category folders.
+    """
     test_zettels = [
         "woodturning/tools/chisel",
         "my_zettel",
@@ -71,9 +74,10 @@ def test_all_subcategories_compilation():
 
 
 def test_subcategory_mapping_compilation():
-    """Test correct subcategory (folders directly below the category folders)
-    mapping compilation."""
+    """Test correct subcategory mapping compilation.
 
+    Includes folders directly below the category folders.
+    """
     test_zettels = [
         "woodturning/tools/chisel",
         "my_zettel",
@@ -102,9 +106,10 @@ def test_subcategory_mapping_compilation():
 
 
 def test_zettel_mapping_compilation():
-    """Test correct zettel (folders directly below the subcategory folders)
-    mapping compilation."""
+    """Test correct zettel mapping compilation.
 
+    Includes folders directly below the subcategory folders.
+    """
     test_zettels = [
         "woodturning/tools/skew",
         "woodturning/tools/gouge",
