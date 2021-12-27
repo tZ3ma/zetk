@@ -2,9 +2,8 @@
 """
 Module aggregating all of the user input parsing capabilities.
 """
-import typing
-
 import logging
+import typing
 from pathlib import Path
 
 from . import defaults

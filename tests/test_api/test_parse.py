@@ -3,7 +3,11 @@ import os
 from pathlib import Path
 
 import pytest
-from zettelkasten import add, defaults, initialize, parse
+
+from zettelkasten import add
+from zettelkasten import defaults
+from zettelkasten import initialize
+from zettelkasten import parse
 
 
 @pytest.mark.parametrize(

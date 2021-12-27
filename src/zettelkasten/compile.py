@@ -2,7 +2,6 @@
 """
 Module to aggregate all of the zettelkasten meta analysis tools.
 """
-
 import os
 from collections import defaultdict
 

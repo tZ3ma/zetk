@@ -1,10 +1,12 @@
 # zettelkasten/defaults.py
-from typing import List, Mapping, Optional, Union
-
 import inspect
 import os
 from datetime import date
 from pathlib import Path
+from typing import List
+from typing import Mapping
+from typing import Optional
+from typing import Union
 
 config_overwrites = [
     "config_folder",

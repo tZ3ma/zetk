@@ -3,9 +3,6 @@
 """
 Module aggregating the command line interface.
 """
-
-from typing import Optional
-
 import configparser
 import logging
 import os
@@ -13,16 +10,20 @@ import platform
 import subprocess
 from enum import Enum
 from pathlib import Path
+from typing import Optional
 
 import typer
 from rich.console import Console
-from rich.prompt import IntPrompt, Prompt
+from rich.prompt import IntPrompt
+from rich.prompt import Prompt
 from rich.theme import Theme
 
 from . import __version__
 from . import add as zadd
 from . import compile as comp
-from . import defaults, monkeypatch, parse
+from . import defaults
+from . import monkeypatch
+from . import parse
 
 logger = logging.getLogger(__name__)
 

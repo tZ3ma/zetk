@@ -1,6 +1,9 @@
 # zettelkasten/../tests/test_api/test_monkey_patch.py
 import pytest
-from zettelkasten import add, defaults, initialize
+
+from zettelkasten import add
+from zettelkasten import defaults
+from zettelkasten import initialize
 
 
 @pytest.mark.dependency(name="zk_dir")

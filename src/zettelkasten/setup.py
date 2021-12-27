@@ -2,7 +2,6 @@
 """
 Module handling the very first use of the zettelkasten after installation.
 """
-
 import logging
 from pathlib import Path
 

@@ -6,13 +6,15 @@ Each time a command is executed via the command line,
 zettelkasten monkey patches it's defaults as specified
 in it's :ref:`cfile`.
 """
-
-from typing import Any, MutableMapping, Optional, Type, Union
-
 import configparser
 import logging
 from datetime import date
 from pathlib import Path
+from typing import Any
+from typing import MutableMapping
+from typing import Optional
+from typing import Type
+from typing import Union
 
 from . import defaults
 

@@ -11,7 +11,7 @@ compile
     subcategory_mapping
     zettel_mapping
     parsed_zettels
-   
+
 .. automodule:: zettelkasten.compile
    :members:
    :show-inheritance:

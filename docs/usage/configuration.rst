@@ -32,7 +32,7 @@ Among the :ref:`most tweaked <most_tweaked>` attributes are the:
 
     - :attr:`Zettel name seperator <zettelkasten.defaults.name_sep>`
     - :attr:`Zettelkasten location <zettelkasten.defaults.location>`
-     
+
 This default config file can be seen below:
 
     .. literalinclude:: ../../tests/testkasten/pytest_dir/.zettelkasten.d/zk.cfg

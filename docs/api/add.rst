@@ -3,7 +3,7 @@
 add
 ===
 
-.. rubric:: Top Level Interface 
+.. rubric:: Top Level Interface
 .. autosummary::
    :nosignatures:
 
@@ -29,10 +29,10 @@ add
    :nosignatures:
 
    create_bibliography_file
-   create_bibliography_file_test_entries   
+   create_bibliography_file_test_entries
    write_source_entry
 
-   
+
 .. automodule:: zettelkasten.add
    :members:
    :show-inheritance:

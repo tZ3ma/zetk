@@ -48,7 +48,7 @@ zettel as in:
 
       zk add category/subcategory/zettelname
 
-      
+
 .. _sources:
 
 _sources

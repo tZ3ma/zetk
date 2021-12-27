@@ -17,8 +17,6 @@ comprehension.
    api/parse
    api/setup
    api/initialize
-   
-..   
-   api/cli
 
-   
+..
+   api/cli

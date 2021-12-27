@@ -2,6 +2,7 @@
 from pathlib import Path
 
 import pytest
+
 import zettelkasten.defaults as defaults
 import zettelkasten.setup
 

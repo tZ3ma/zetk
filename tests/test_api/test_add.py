@@ -2,8 +2,11 @@ import os
 from pathlib import Path
 
 import pytest
-from zettelkasten import add, initialize, parse
+
 import zettelkasten.defaults
+from zettelkasten import add
+from zettelkasten import initialize
+from zettelkasten import parse
 
 # from zettelkasten.defaults import location
 

@@ -5,8 +5,8 @@ import os
 import pathlib
 import shutil
 
-
-from . import defaults, parse
+from . import defaults
+from . import parse
 
 logger = logging.getLogger(__name__)
 
@@ -608,8 +608,7 @@ def write_source_entry(
                 logger.debug("Overwrite requested.")
 
                 part_1 = f"@misc{{{uid},\n"
-                part_2 = content.split(
-                    part_1)[-1].split("\n}%\n")[0] + "\n}%\n"
+                part_2 = content.split(part_1)[-1].split("\n}%\n")[0] + "\n}%\n"
 
                 content_to_overwrite = part_1 + part_2
 

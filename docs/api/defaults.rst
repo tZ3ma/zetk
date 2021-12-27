@@ -23,7 +23,7 @@ defaults
 
 
 .. _zettel_attributes:
-.. rubric:: Zettel Attributes   
+.. rubric:: Zettel Attributes
 .. autosummary::
    :nosignatures:
 
@@ -38,9 +38,9 @@ defaults
 
    initial_folder_structure
    sources_directory
-   zettelkasten_bib_file   
+   zettelkasten_bib_file
 
-.. rubric:: Zettel Reference Mechanics   
+.. rubric:: Zettel Reference Mechanics
 .. autosummary::
    :nosignatures:
 
@@ -49,7 +49,7 @@ defaults
    def_location_specifier
    def_title
    def_year
-   source_file_formats   
+   source_file_formats
 
 .. automodule:: zettelkasten.defaults
    :members:

@@ -38,7 +38,7 @@ Zettelkasten
    :alt: pre-commit
 .. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
-   :alt: Black                
+   :alt: Black
 
 .. _Contributor Guide: contributing.html
 .. _Usage: usage.html
@@ -53,7 +53,7 @@ Documentation
 
    getting_started/installation
 
-..             
+..
    getting_started/introduction
    getting_started/quickstart
 
@@ -61,13 +61,13 @@ Documentation
    :maxdepth: 1
    :caption: User's Guide
 
-   usage/zettelkasten             
+   usage/zettelkasten
    usage/zettels
    usage/configuration
    usage/styles
    usage/references
 
-..   
+..
    usage/meta_data
 
 .. toctree::
@@ -80,9 +80,9 @@ Documentation
    :maxdepth: 1
    :caption: Changelog
 
-   changelog/v0.3.0             
+   changelog/v0.3.0
    changelog/v0.2.3
-   changelog/v0.2.2             
+   changelog/v0.2.2
    changelog/v0.2.1
 
 
@@ -95,7 +95,7 @@ Documentation
    contributing
    Code of Conduct <codeofconduct>
    License <license>
-   
+
 
 Indices and tables
 ==================
