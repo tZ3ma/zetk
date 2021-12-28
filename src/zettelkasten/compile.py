@@ -184,6 +184,7 @@ def zettel_mapping():
         >>> # creating woodturning/tools zettels
         >>> add.new_zettel("woodturning/tools/chisel", force_overwrite=True)
         >>> add.new_zettel("woodturning/tools/skew", force_overwrite=True)
+        >>> add.new_zettel("woodturning/tools/gouge", force_overwrite=True)
 
         >>> # creating another sorted zettel
         >>> add.new_zettel("carpentry/tools/plane", force_overwrite=True)
@@ -199,7 +200,7 @@ def zettel_mapping():
         >>> pprint.pprint(zettel_mapping())
         {'carpentry': {'tools': ['chisel', 'plane']},
          'lobby': ['my_zettel'],
-         'woodturning': {'tools': ['chisel', 'skew']}}
+         'woodturning': {'tools': ['chisel', 'gouge', 'skew']}}
     """
     path = defaults.location
 
@@ -258,6 +259,7 @@ def parsed_zettels():
         >>> # creating woodturning/tools zettels
         >>> add.new_zettel("woodturning/tools/chisel", force_overwrite=True)
         >>> add.new_zettel("woodturning/tools/skew", force_overwrite=True)
+        >>> add.new_zettel("woodturning/tools/gouge", force_overwrite=True)
 
         >>> # creating another sorted zettel
         >>> add.new_zettel("carpentry/tools/plane", force_overwrite=True)
@@ -275,6 +277,7 @@ def parsed_zettels():
         'carpentry/tools/plane',
         'lobby/my_zettel',
         'woodturning/tools/chisel',
+        'woodturning/tools/gouge',
         'woodturning/tools/skew']
 
     """

@@ -4,7 +4,6 @@
 API for adding zettels and sources, as well as their subsequent lower-level
 functionalities.
 """
-import inspect
 import logging
 import os
 import pathlib
@@ -14,17 +13,6 @@ from . import defaults
 from . import parse
 
 logger = logging.getLogger(__name__)
-
-install_location = os.path.normpath(
-    os.path.join(
-        inspect.getfile(inspect.currentframe()).split(  # type: ignore
-            "defaults"
-        )[0],
-        "..",
-        "..",
-        "..",
-    )
-)
 
 
 def create_zettel_location(parsed_zettel_name, dummy_location=None):
@@ -310,28 +298,28 @@ def create_bibliography_file_test_entries(
     """
     example_entries = [
         (
-            f"{install_location}/tests/bib_sources/test_audio.mp3",
+            f"{defaults.config_folder}/testfiles/test_audio.mp3",
             "audio_2021_sec2",
             "sec 2",
             "zk_api",
             "Test Audio",
         ),
         (
-            f"{install_location}/tests/bib_sources/test_image.jpg",
+            f"{defaults.config_folder}/testfiles/test_image.jpg",
             "image_2021",
             None,
             "zk_api",
             "Test Image",
         ),
         (
-            f"{install_location}/tests/bib_sources/test_pdf.pdf",
+            f"{defaults.config_folder}/testfiles/test_pdf.pdf",
             "pdf_2021_p2",
             "page 2",
             "zk_api",
             "Test PDF",
         ),
         (
-            f"{install_location}/tests/bib_sources/test_video.mp4",
+            f"{defaults.config_folder}/testfiles/test_video.mp4",
             "video_2021_min42",
             "min 42",
             "zk_api",

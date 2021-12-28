@@ -1,7 +1,7 @@
 """Module for testing zettel compilation."""
 import os
 
-import zettelkasten
+import zettelkasten.compile
 
 # import pytest
 

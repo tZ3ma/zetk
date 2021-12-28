@@ -36,7 +36,6 @@ def structure_zettelkasten(dummy_location=None):
     Create a zettelkasten at the default location (tests directory of
     'zettelkasten'):
 
-
     >>> structure_zettelkasten()
 
     Check if the main directory is present:
