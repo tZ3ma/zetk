@@ -63,7 +63,7 @@ smmap = "^4.0.0"
 GitPython = "^3.1.16"
 smmap2 = "^3.0.1"
 Pygments = "^2.9.0"
-importlib-metadata = "^3.7.2"
+importlib-metadata = "^4.10.0"
 identify = "^2.2.4"
 furo = "^2021.11.23"
 
