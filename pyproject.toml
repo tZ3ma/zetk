@@ -65,7 +65,7 @@ smmap2 = "^3.0.1"
 Pygments = "^2.9.0"
 importlib-metadata = "^4.10.0"
 identify = "^2.2.4"
-furo = "^2021.11.23"
+furo = "^2022.2.23"
 
 [tool.black]
 # https://github.com/psf/black
